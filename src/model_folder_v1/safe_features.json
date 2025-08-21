@@ -1,0 +1,23 @@
+{
+  "features": [
+    "route",
+    "wx_location",
+    "time_of_day_segment",
+    "wind_strength",
+    "day_of_week",
+    "hour_of_day",
+    "wx_temp_c",
+    "wx_rain_mm",
+    "wx_wind_kmh",
+    "leg_incident_count",
+    "leg_incident_delay_sum_sec",
+    "is_weekend",
+    "rain_flag",
+    "feels_like_temp",
+    "extreme_weather_flag",
+    "weather_delay_interaction",
+    "incident_weather_interaction",
+    "time_weather_interaction"
+  ],
+  "saved_at": "2025-08-13T10:52:07.358547Z"
+}
