@@ -14,6 +14,9 @@ from pydantic import BaseModel, Field, field_validator
 from dotenv import load_dotenv
 load_dotenv()
 
+from langchain_openai import ChatOpenAI
+from langchain.prompts import ChatPromptTemplate
+
 from src.tools import (
     END_POINTS,
     WAYPOINTS,
@@ -396,10 +399,6 @@ def agent_compose(req: ComposeRequest):
                 "bbox": ctx["bbox"],
                 "count": (len(tomtom.get("incidents", [])) if isinstance(tomtom, dict) else 0),
             }
-
-        # 3) Prompt LLM to mix what is relevant
-        from langchain_openai import ChatOpenAI
-        from langchain.prompts import ChatPromptTemplate
 
         chat = ChatOpenAI(model_name="gpt-4o-mini", temperature=0, max_retries=8, timeout=60)
         mix_prompt = ChatPromptTemplate.from_template(
