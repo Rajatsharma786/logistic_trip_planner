@@ -1,4 +1,4 @@
-#  Logistic Agent Planner
+#  Logistic Trip Planner Agent
 
 A sophisticated AI-powered logistics and transportation planning system that combines Machine Learning, RAG (Retrieval-Augmented Generation), and real-time data integration for intelligent route planning and ETA prediction.
 
