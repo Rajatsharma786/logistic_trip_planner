@@ -18,47 +18,8 @@ A sophisticated AI-powered logistics and transportation planning system that com
 
 ##  Architecture
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                    Logistic Agent Planner                       │
-│                        (FastAPI App)                            │
-└─────────────────────────────────────────────────────────────────┘
-                                │
-                    ┌───────────┼───────────┐
-                    │           │           │
-         ┌──────────▼─────┐     │     ┌─────▼──────────┐
-         │   ML Model     │     │     │   RAG System   │
-         │  (XGBoost)     │     │     │  (ChromaDB)    │
-         │                │     │     │                │
-         │ • Predicts     │     │     │ • Retrieves    │
-         │   travel time  │     │     │   documents    │
-         │ • Uses weather │     │     │ • Provides     │
-         │   & traffic    │     │     │   context      │
-         └────────────────┘     │     └────────────────┘
-                    │           │           │
-                    └───────────┼───────────┘
-                                │
-                    ┌───────────▼───────────┐
-                    │    Hybrid Agent       │
-                    │   (OpenAI GPT-4o)     │
-                    │                       │
-                    │ • Combines ML         │
-                    │   predictions with    │
-                    │   RAG context         │
-                    │ • Generates smart     │
-                    │   responses           │
-                    └───────────────────────┘
-                                │
-                                ▼
-                         External APIs       
-                                │                 
-                    ┌───────────|──────────┐
-                    │           │          │          
-                ┌────▼────┐ ┌───▼───┐ ┌────▼────┐    
-                │  BoM    │ │TomTom │ │ OpenAI  │    
-                │Weather  │ │Traffic│ │   LLM   │    
-                └─────────┘ └───────┘ └─────────┘    
-```
+<img width="1315" height="774" alt="image" src="https://github.com/user-attachments/assets/f586a9f4-12ec-4309-b311-85c594a558e9" />
+
 
 **How it works:**
 1. **Weather & Traffic APIs** provide real-time data
