@@ -18,7 +18,7 @@ A sophisticated AI-powered logistics and transportation planning system that com
 
 ##  Architecture
 
-<img width="1315" height="774" alt="image" src="https://github.com/user-attachments/assets/f586a9f4-12ec-4309-b311-85c594a558e9" />
+<img width="1078" height="848" alt="image" src="https://github.com/user-attachments/assets/726b257d-c7dc-44a0-a06e-0843a9cb755d" />
 
 
 **How it works:**
