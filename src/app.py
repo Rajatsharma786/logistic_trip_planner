@@ -84,6 +84,23 @@ class PredictResponse(BaseModel):
 
 app = FastAPI(title="ETA Prediction Service", version="1.0.0")
 
+@app.get("/")
+def root():
+    """Root endpoint - shows available endpoints"""
+    return {
+        "message": "ETA Prediction Service API",
+        "version": "1.0.0",
+        "endpoints": {
+            "health": "/health",
+            "predict": "/predict_travel_time",
+            "rag_query": "/rag/query",
+            "agent": "/agent/compose",
+            "docs": "/docs",
+            "redoc": "/redoc"
+        },
+        "status": "running"
+    }
+
 def _localize(ts_utc: datetime) -> datetime:
     if ts_utc.tzinfo is None:
         ts_utc = ts_utc.replace(tzinfo=timezone.utc)
