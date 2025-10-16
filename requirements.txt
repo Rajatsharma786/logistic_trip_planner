@@ -42,3 +42,7 @@ tenacity==8.2.3
 # Utilities
 python-multipart==0.0.20
 bs4
+
+# Streamlit
+streamlit==1.40.2
+requests==2.32.3
